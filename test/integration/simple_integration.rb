@@ -2,7 +2,7 @@
 
 require 'test_helper'
 
-class ApplicationControllerTest < ActionDispatch::IntegrationTest
+class HomeControllerTest < ActionDispatch::IntegrationTest
   test 'be able to visit home page' do
     get '/'
     assert_response :success
