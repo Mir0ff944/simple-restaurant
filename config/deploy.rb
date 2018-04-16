@@ -2,7 +2,7 @@
 lock "~> 3.10.2"
 
 set :application, 'restaurant2.0'
-set :repo_url, 'git@github.com:Mir0ff944/simple-restaurant.git'
+set :repo_url, 'https://github.com/Mir0ff944/simple-restaurant.git'
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
