@@ -17,6 +17,7 @@ module Restaurant20
     # the framework and any gems in your application.
 
     # Locales config
-    config.i18n.default_locale = :bg
+    I18n.available_locales = %i[en bg]
+    I18n.default_locale = :bg
   end
 end

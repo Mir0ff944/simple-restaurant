@@ -1,2 +1,31 @@
-<h2>Hahah</h2>
+<nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-shrink creamy-white-nav">
+  <div class="container">
+    <a class="navbar-brand" href="#">Navbar</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+      <%= t('nav.menu')%>
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarResponsive">
+      <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="#menu"><%= t('nav.menu')%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#gallery"><%= t('nav.gallery')%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#about"><%= t('nav.about')%></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#map"><%= t('nav.map')%></a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<header class="masthead">
+  <div class="intro-body">
+  </div>
+</header>
 <%= yield %>
