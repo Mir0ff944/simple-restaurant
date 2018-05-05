@@ -19,6 +19,8 @@ gem 'uglifier', '~> 4.1', '>= 4.1.8'
 # gem 'mini_racer', platforms: :ruby
 gem 'execjs', '~> 2.7'
 
+gem 'shoulda-context', '~> 1.2', '>= 1.2.1'
+
 gem 'jquery-rails'
 
 gem 'bundler', '~> 1.15', '>= 1.15.4'
@@ -58,6 +60,7 @@ group :development do
 end
 
 group :test do
+  gem 'pry', '~> 0.10.3'
   # Adds support for Capybara system testing and selenium driver
   gem 'capybara', '>= 2.15', '< 4.0'
   gem 'selenium-webdriver'

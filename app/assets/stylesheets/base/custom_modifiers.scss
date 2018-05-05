@@ -165,6 +165,10 @@ a {
     background: url(asset-path('test_img_sm.png')) no-repeat bottom center scroll;
     margin-top: 11%;
   }
+
+  div.row {
+    font-size: .7rem;
+  }
 }
 
 .content-section {
@@ -175,12 +179,12 @@ a {
 
 .section-faded-backgroud {
   // background: rgba(248, 226, 208, 0.616);
-  background: linear-gradient(rgba(255,0,0,0), rgba(245, 216, 202, 0.582),rgba(255,0,0,0));
+  background: linear-gradient(rgba(255,0,0,0), rgba(247, 225, 215, 0.582),rgba(255,0,0,0));
   display: block;
   overflow: auto;
 }
 
 .creamy-white-nav {
   // background: linear-gradient(rgb(255, 221, 206),rgba(255, 255, 255, 0.103)  95%)
-  background: linear-gradient(rgb(255, 239, 230) 95%, rgba(255, 255, 255, 0.075));
+  background: linear-gradient(rgb(250, 243, 230) 92%, rgba(255, 255, 255, 0.075));
 }
