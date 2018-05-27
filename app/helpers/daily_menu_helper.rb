@@ -2,7 +2,10 @@
 
 module DailyMenuHelper
   def menu_reader
-    dishes = ::MenuBuilder::MASTER_MENU
-    dishes.each(&:to_s)
+    ::MenuBuilder::MASTER_MENU
+  end
+
+  def drinks_reader
+    ::MenuBuilder::DRINKS_MENU
   end
 end
