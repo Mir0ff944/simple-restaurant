@@ -1,6 +1,6 @@
 <nav class="navbar fixed-top navbar-expand-lg navbar-light navbar-shrink creamy-white-nav">
   <div class="container">
-    <a class="navbar-brand" href="/">Restaurant</a>
+    <a class="navbar-brand" href="/" onClick='location.reload()'>Restaurant</a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
       <%= t('nav.menu')%>
       <span class="navbar-toggler-icon"></span>
@@ -9,16 +9,16 @@
     <div class="collapse navbar-collapse" id="navbarResponsive">
       <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#menu"><%= t('nav.menu')%></a>
+          <a class="nav-link" href="#menu" onClick='location.reload()'><%= t('nav.menu')%></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#gallery"><%= t('nav.gallery')%></a>
+          <a class="nav-link" href="#gallery" onClick='location.reload()'><%= t('nav.gallery')%></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#map"><%= t('nav.map')%></a>
+          <a class="nav-link" href="#map" onClick='location.reload()'><%= t('nav.map')%></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#about"><%= t('nav.about')%></a>
+          <a class="nav-link" href="#about" onClick='location.reload()'><%= t('nav.about')%></a>
         </li>
       </ul>
     </div>
