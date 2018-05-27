@@ -1,15 +1,28 @@
-<% @title="Page title test" %>
+<% @title="Ресторант Ари" %>
 <section id="menu" class="content-section text-center">
   <div class="container">
     <%= render 'menu' %>
   </div>
 </section>
+<hr class='line-separator'/>
+<section id="about" class="content-section text-center section-faded-backgroud">
+  <h2>This will be the about us section</h2>
+</section>
+<section id="map" class="content-section text-center">
+  <div class="container">
+    <%= render 'map' %>
+  </div>
+</section>
 <section id="gallery" class="content-section text-center section-faded-backgroud">
   <h2>This will be the gallery</h2>
 </section>
-<section id="about" class="content-section text-center">
-  <h2>This will be the about us section</h2>
-</section>
-<section id="map" class="content-section text-center section-faded-backgroud">
-  <h2>This will contain google maps api</h2>
-</section>
+<hr class='line-separator'/>
+<footer class="page-footer font-small blue pt-4 mt-4">
+  <div class="container-fluid text-center text-md-left">
+    <%= render 'footer' %>
+  </div>
+  
+  <div class="footer-copyright text-center py-3">© 2018 Copyright:
+  </div>
+
+</footer>
