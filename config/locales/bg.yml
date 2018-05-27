@@ -36,3 +36,7 @@ bg:
     gallery: Галерия
     about: Информация и контакти
     map: Карта
+  menu:
+    dish: Ястие
+    price: Цена
+    drink: Напитки
