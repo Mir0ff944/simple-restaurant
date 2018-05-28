@@ -13,10 +13,10 @@ module MenuBuilder
   }.freeze
 
   DRINKS_MENU = {
-    'Coca Cola': '1 лв',
-    'Sprite': '1 лв',
-    'Fanta': '1 лв',
-    'Шуменско': '1.50 лв',
-    'Айрян': '1 лв'
+    'Coca Cola <i><small>500ml</small></i>': '1 лв',
+    'Sprite <i><small>500ml</small></i>': '1 лв',
+    'Fanta <i><small>500ml</small></i>': '1 лв',
+    'Шуменско <i><small>500ml</small></i>': '1.50 лв',
+    'Айрян <i><small>500ml</small></i>': '1 лв'
   }.freeze
 end
