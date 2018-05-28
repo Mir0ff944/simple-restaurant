@@ -19,5 +19,14 @@ module Restaurant20
     # Locales config
     I18n.available_locales = %i[en bg]
     I18n.default_locale = :bg
+
+    def load_env_file(environment = nil)
+      path = Rails.root.join('config', "env#{environment.nil? ? '' : '.'+environment}.yml")
+      return unless File.exist? path
+      config = YAML.safe_load(ERB.new(File.new(path).read).result)
+      config.each { |key, value| ENV[key.to_s] = value.to_s }
+    end
+
+    load_env_file(Rails.env)
   end
 end
