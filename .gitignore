@@ -28,5 +28,7 @@
 
 # Ignore master key for decrypting credentials and more.
 /config/master.key
+/config/secrets.yml
 /config/google_api.key
 /config/env.development.yml
+/config/env.production.yml

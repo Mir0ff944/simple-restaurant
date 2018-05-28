@@ -40,5 +40,8 @@ require "capistrano/rails/assets"
 # require 'capistrano/passenger'
 # load 'deploy/assets'
 
+# Capistrano linked files gem
+require 'capistrano/linked_files'
+
 # Load custom tasks from `lib/capistrano/tasks` if you have any defined
 Dir.glob("lib/capistrano/tasks/*.rake").each { |r| import r }
