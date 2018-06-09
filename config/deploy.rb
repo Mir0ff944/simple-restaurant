@@ -27,7 +27,7 @@ append :linked_files, 'config/env.production.yml', 'config/secrets.yml', 'config
 # append :linked_dirs, "log", "tmp/pids", "tmp/cache", "tmp/sockets", "public/system"
 
 # set :linked_dirs, []
-append :linked_dirs, 'public'
+set :linked_dirs, %w[tmp/pids tmp/sockets tmp/cache]
 
 # Default value for default_env is {}
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
