@@ -190,10 +190,21 @@ a {
 }
 
 #map {
-  width: 100%;
   height: 400px;
+  width: 100%;
 }
 
 .line-separator {
   width: 70%;
 }
+
+img.image-preview {
+  margin: 7px;
+
+  &:hover {
+    -webkit-transform: scale(1.05);
+    -webkit-transition: 1 ease;
+    -webkit-box-shadow: 0 0 10px #000000;
+  }
+}
+
