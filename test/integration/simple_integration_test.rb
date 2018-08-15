@@ -11,6 +11,6 @@ class SimpleIntegrationTest < ActionDispatch::IntegrationTest
     assert_select 'a.nav-link', 'Меню'
     assert_select 'a.nav-link', 'Галерия'
     assert_select 'a.nav-link', 'Карта'
-    assert_select 'a.nav-link', 'Информация и контакти'
+    assert_select 'a.nav-link', 'Информация'
   end
 end
