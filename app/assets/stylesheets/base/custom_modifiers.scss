@@ -4,12 +4,12 @@ body {
   width: 100%;
   height: 100%;
   color: rgb(0, 0, 0);
-  background-color: rgb(255, 255, 255)
+  background: url(asset-path('mock-background.png')) repeat scroll;
 }
 
 html {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -216,4 +216,19 @@ img.image-preview {
     padding-bottom: 5px;
     border-radius: 10px;
   }
+}
+
+.my_btn {
+  background-color: #858585;
+  border: none;
+  border-radius: 10px;
+  bottom: 20px;
+  display: none;
+  left: 30px;
+  position: fixed;
+  z-index: 99;
+}
+
+.food-menu {
+  background-color: #ffffff;
 }

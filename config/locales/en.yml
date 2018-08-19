@@ -31,3 +31,13 @@
 
 en:
   hello: "Hello world"
+  nav:
+    menu: Menu
+    gallery: Gallery
+    about: Information
+    map: Map
+    back_to_top: Back to top
+  menu:
+    dish: Dishes
+    price: Price
+    drink: Drinks
