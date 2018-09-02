@@ -1,5 +1,5 @@
 # config valid for current version and patch releases of Capistrano
-lock "~> 3.10.2"
+lock "~> 3.11"
 
 set :application, 'restaurant2.0'
 set :repo_url, 'https://github.com/Mir0ff944/simple-restaurant.git'
