@@ -101,13 +101,13 @@ a {
 }
 
 .masthead {
-  display: table;
+  display: block;
   width: 100%;
   height: auto;
   padding: 200px 0;
   text-align: center;
   color: #fff;
-  background: url(asset-path('test_img.png')) no-repeat bottom center scroll;
+  background: url(asset-path('large_banner_bistro.jpg')) no-repeat bottom center;
   background-color:rgb(255, 255, 255);
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -128,10 +128,15 @@ a {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 1024px) {
   .masthead {
-    background: url(asset-path('test_img_md.png')) no-repeat bottom center scroll;
-    margin-top: 6%;
+    width: 100%;
+    height: auto;
+    background: url(asset-path('md_banner_bistro.jpg')) no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   .masthead .intro-body .brand-heading {
@@ -145,8 +150,13 @@ a {
 
 @media only screen and (max-width: 425px) {
   .masthead {
-    background: url(asset-path('test_img_sm.png')) no-repeat bottom center scroll;
-    margin-top: 11%;
+    width: 100%;
+    height: auto;
+    background: url(asset-path('sm_banner_bistro.jpg')) no-repeat bottom center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
   }
 
   div.row {
@@ -162,14 +172,12 @@ a {
 
 .section-faded-backgroud {
   // background: rgba(248, 226, 208, 0.616);
-  background: linear-gradient(rgba(255,0,0,0), rgba(247, 225, 215, 0.582),rgba(255,0,0,0));
+  background: linear-gradient(rgba(255, 254, 254, 0.37), rgba(255, 255, 255, 0.774), rgba(255, 254, 254, 0.37));
   display: block;
   overflow: auto;
 }
 
 .creamy-white-nav {
-  // background: linear-gradient(rgb(255, 221, 206),rgba(255, 255, 255, 0.103)  95%)
-  // background: linear-gradient(rgb(214, 214, 214) 92%, rgba(255, 255, 255, 0.075));
   background: url(asset-path('navbar-rug.jpg')) repeat-x;
 }
 
@@ -229,6 +237,6 @@ img.image-preview {
   z-index: 99;
 }
 
-.food-menu {
+.menu-white-bg {
   background-color: #ffffff;
 }
