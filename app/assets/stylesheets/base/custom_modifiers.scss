@@ -113,6 +113,8 @@ a {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
 }
 
 .masthead .intro-body {
@@ -128,7 +130,7 @@ a {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 1200px) {
   .masthead {
     width: 100%;
     height: auto;
@@ -137,6 +139,8 @@ a {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
   }
 
   .masthead .intro-body .brand-heading {
@@ -148,7 +152,7 @@ a {
   }
 }
 
-@media only screen and (max-width: 425px) {
+@media only screen and (max-width: 767px) {
   .masthead {
     width: 100%;
     height: auto;
@@ -172,13 +176,14 @@ a {
 
 .section-faded-backgroud {
   // background: rgba(248, 226, 208, 0.616);
-  background: linear-gradient(rgba(255, 254, 254, 0.37), rgba(255, 255, 255, 0.774), rgba(255, 254, 254, 0.37));
-  display: block;
+  background: linear-gradient(#fafafa7c, #fcfaf4bd, #ffffff7a);
   overflow: auto;
 }
 
 .creamy-white-nav {
   background: url(asset-path('navbar-rug.jpg')) repeat-x;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
 }
 
 .nav-bar-button, .nav-bar-button:hover {
@@ -189,6 +194,7 @@ a {
 .fit-min-content {
   width: -webkit-min-content !important;
   width: -moz-min-content !important;
+  width: -o-min-content !important;
 }
 
 #map {
@@ -204,6 +210,9 @@ img.image-preview {
   margin: 7px;
 
   &:hover {
+    transform: scale(1.05);
+    transition: 1 ease;
+    box-shadow: 0 0 10px #000000;
     -webkit-transform: scale(1.05);
     -webkit-transition: 1 ease;
     -webkit-box-shadow: 0 0 10px #000000;
@@ -227,7 +236,13 @@ img.image-preview {
 }
 
 .my_btn {
-  background-color: #858585;
+  height: 40px;
+  width: 40px;
+  background: url(asset_path('up-arrow-circular-button.png')) no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
   border: none;
   border-radius: 10px;
   bottom: 20px;
@@ -239,4 +254,5 @@ img.image-preview {
 
 .menu-white-bg {
   background-color: #ffffff;
+  border-radius: 15px;
 }
