@@ -8,8 +8,6 @@
 // layout file, like app/views/layouts/application.html.erb
 
 import ReactOnRails from 'react-on-rails';
-import NewSection from '../components/New_section';
+import ReactSections from '../components/reactSections';
 
-ReactOnRails.register({
-  NewSection
-});
+ReactOnRails.register({ ReactSections });
