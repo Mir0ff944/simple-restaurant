@@ -1,25 +1,29 @@
 <% @title="Бистро Аги" %>
+
 <section id="menu" class="content-section text-center">
   <div class="container">
     <%= render 'menu' %>
   </div>
 </section>
+
 <hr class='line-separator'/>
 <section id="about" class="content-section text-center">
   <%= render 'about'%>
 </section>
+
 <section id="map" class="content-section text-center">
   <div class="container">
     <%= render 'map' %>
   </div>
 </section>
+
 <section id="gallery" class="content-section text-center">
   <%= render 'gallery' %>
 </section>
-
 <button class="btn back-to-top-btn" id="back-to-top-btn" onClick="topFunction()" title="<%= t('nav.back_to_top') %>"></button>
 
 <hr class='line-separator'/>
+
 <footer class="page-footer font-small blue pt-4 mt-4">
 <!--
   <div class="container-fluid text-center text-md-left">

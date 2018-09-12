@@ -32,3 +32,8 @@
 /config/google_api.key
 /config/env.development.yml
 /config/env.production.yml
+/public/packs
+/public/packs-test
+/node_modules
+yarn-debug.log*
+.yarn-integrity
