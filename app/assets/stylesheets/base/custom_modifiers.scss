@@ -4,7 +4,11 @@ body {
   width: 100%;
   height: 100%;
   color: rgb(0, 0, 0);
-  background: url(asset-path('mock-background.png')) repeat scroll;
+  background: url(asset-path('new-background-3000.png')) fixed no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 html {
