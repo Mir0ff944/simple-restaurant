@@ -1,10 +1,14 @@
 body {
-  font-family: Lora,'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   position: relative;
   width: 100%;
   height: 100%;
   color: rgb(0, 0, 0);
-  background: url(asset-path('mock-background.png')) repeat scroll;
+  background: url(asset-path('new-background-3000.png')) fixed no-repeat center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 html {
@@ -13,11 +17,15 @@ html {
 }
 
 h1,h2,h3,h4,h5,h6 {
-  font-family: Cabin,'Helvetica Neue',Helvetica,Arial,sans-serif;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
   font-weight: 700;
   margin: 0 0 35px;
   letter-spacing: 1px;
-  text-transform: uppercase
+}
+
+.section-title {
+  font-style: italic;
+  margin-bottom: 5px;
 }
 
 p {
@@ -103,18 +111,18 @@ a {
 .masthead {
   display: block;
   width: 100%;
-  height: auto;
-  padding: 200px 0;
+  height: fit-content;
+  padding: 161px 0;
   text-align: center;
   color: #fff;
-  background: url(asset-path('large_banner_bistro.jpg')) no-repeat bottom center;
+  background: url(asset-path('large_banner_bistro.jpg')) no-repeat center;
   background-color:rgb(255, 255, 255);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
 }
 
 .masthead .intro-body {
@@ -130,11 +138,11 @@ a {
   font-size: 18px;
 }
 
-@media only screen and (max-width: 1200px) {
+@media only screen and (max-width: 990px) {
   .masthead {
     width: 100%;
     height: auto;
-    background: url(asset-path('md_banner_bistro.jpg')) no-repeat bottom center;
+    background: url(asset-path('md_banner_bistro.jpg')) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -152,11 +160,11 @@ a {
   }
 }
 
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 763px) {
   .masthead {
     width: 100%;
     height: auto;
-    background: url(asset-path('sm_banner_bistro.jpg')) no-repeat bottom center;
+    background: url(asset-path('sm_banner_bistro.jpg')) no-repeat center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -164,7 +172,7 @@ a {
   }
 
   div.row {
-    font-size: .7rem;
+    font-size: .8rem;
   }
 }
 
@@ -235,7 +243,7 @@ img.image-preview {
   }
 }
 
-.my_btn {
+.back-to-top-btn {
   height: 40px;
   width: 40px;
   background: url(asset_path('up-arrow-circular-button.png')) no-repeat;
@@ -253,6 +261,10 @@ img.image-preview {
 }
 
 .menu-white-bg {
-  background-color: #ffffff;
+  background-color: #ffffffaf;
   border-radius: 15px;
+}
+
+.rem-1-font {
+  font-size: 1.1rem
 }

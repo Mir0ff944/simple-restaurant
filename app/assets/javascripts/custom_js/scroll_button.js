@@ -3,10 +3,11 @@ window.onscroll = function () {
 }
 
 function scrollFunction() {
+  var button = document.getElementById("back-to-top-btn")
   if (document.body.scrollTop >= 300 || document.documentElement.scrollTop >= 300) {
-    document.getElementById("myBtn").style.display = "block";
+    button.style.display = "block";
   } else {
-    document.getElementById("myBtn").style.display = "none";
+    button.style.display = "none";
   }
 }
 
