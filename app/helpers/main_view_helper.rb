@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-module DailyMenuHelper
+module MainViewHelper
   def menu_reader
     ::MenuBuilder::MASTER_MENU
   end
