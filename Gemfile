@@ -44,6 +44,8 @@ gem 'jbuilder', '~> 2.5'
 
 #Capistrano linked files
 gem 'capistrano-linked-files'
+gem 'capistrano-npm'
+gem 'capistrano-nvm'
 
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', '>= 1.1.0', require: false

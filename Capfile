@@ -31,11 +31,14 @@ require 'capistrano/rbenv'
 set :rbenv_type, :user # or :system, depends on your rbenv setup
 set :rbenv_ruby, '2.5.0'
 
+require 'capistrano/npm'
+require 'capistrano/nvm'
+
 # require "capistrano/rvm"
 # require "capistrano/chruby"
 require 'capistrano/bundler'
 require 'capistrano/rails'
-require "capistrano/rails/assets"
+require 'capistrano/rails/assets'
 # require "capistrano/rails/migrations"
 # require 'capistrano/passenger'
 # load 'deploy/assets'
