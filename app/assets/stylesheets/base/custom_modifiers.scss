@@ -21,6 +21,10 @@ h1,h2,h3,h4,h5,h6 {
   font-weight: 700;
   margin: 0 0 35px;
   letter-spacing: 1px;
+
+  &.info {
+    margin: 0px;
+  }
 }
 
 .section-title {
@@ -212,6 +216,10 @@ a {
 
 .line-separator {
   width: 70%;
+
+  &.--info {
+    margin: 0px;
+  }
 }
 
 img.image-preview {
@@ -261,10 +269,16 @@ img.image-preview {
 }
 
 .menu-white-bg {
-  background-color: #ffffffaf;
+  background-color: #ffffffd7;
   border-radius: 15px;
 }
 
 .rem-1-font {
   font-size: 1.1rem
+}
+
+.info-list {
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: left;
 }

@@ -4,7 +4,7 @@ function initMap() {
 
   map = new google.maps.Map(document.getElementById('map'), {
     center: location,
-    zoom: 16
+    zoom: 17
   });
 
   var marker = new google.maps.Marker({
