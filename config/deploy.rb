@@ -43,6 +43,6 @@ set :linked_dirs, %w[tmp/pids tmp/sockets tmp/cache]
 
 # npm and nvmdeploy conifg
 set :npm_flags, '--production'
-set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v0.10.21'
-set :nvm_map_bins, %w{node npm yarn}
+# set :nvm_type, :user # or :system, depends on your nvm setup
+# set :nvm_node, 'v0.33.11'
+# set :nvm_map_bins, %w{node npm yarn}

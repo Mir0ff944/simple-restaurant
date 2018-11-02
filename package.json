@@ -1,6 +1,11 @@
 {
   "name": "restaurant2_0",
   "private": true,
+  "engines": {
+    "node": "10.2.1",
+    "npm": "5.6.0",
+    "yarn": "1.6.0"
+  },
   "dependencies": {
     "@rails/webpacker": "3.5",
     "ajv": "^6.5.4",
@@ -13,13 +18,16 @@
     "react-images": "^0.5.19",
     "react-on-rails": "^11.1.8",
     "react-photo-gallery": "^6.2.1",
-    "react-transition-group": "^2.5.0"
+    "react-transition-group": "^2.5.0",
+    "webpack": "^4.24.0"
   },
   "devDependencies": {
     "es6-shim": "^0.35.4",
     "file-loader": "^2.0.0",
+    "gulp-sass": "^4.0.2",
     "imports-loader": "^0.8.0",
     "url-loader": "^1.1.2",
     "webpack-dev-server": "2.11.2"
-  }
+  },
+  "build:production": "NODE_ENV=production npm install && NODE_ENV=production webpack --config webpack.config.js"
 }
