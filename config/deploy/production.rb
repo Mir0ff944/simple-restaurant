@@ -2,6 +2,10 @@ set :stage, :production
 server '206.189.120.253', user: 'deploy', roles: %w[web app]
 
 
+set :nvm_type, :user # or :system, depends on your nvm setup
+set :nvm_node, 'v8.12.0'
+set :nvm_map_bins, %w{node npm yarn}
+
 set :yarn_flags, '--production'
 set :yarn_roles, :all
 set :yarn_env_variables, {}

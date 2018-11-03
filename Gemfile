@@ -86,6 +86,7 @@ end
 
 group :deploy do
   gem 'capistrano', '~> 3.11'
+  gem 'capistrano-nvm'
   gem 'capistrano-npm'
   gem 'capistrano-yarn'
 end
