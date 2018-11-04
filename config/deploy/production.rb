@@ -2,22 +2,35 @@ set :stage, :production
 server '206.189.120.253', user: 'deploy', roles: %w[web app]
 
 
-set :yarn_flags, '--production'
-set :yarn_roles, :all
-set :yarn_env_variables, {}
+# set :yarn_flags, '--production'
+# set :yarn_roles, :all
+# set :yarn_env_variables, {}
 
-namespace :webpacker do
-  task :install do
-    on roles(:web) do
-      with rails_env: fetch(:rails_env) do
-        rake 'react_on_rails:locale'
-        execute :yarn, :run, 'build:production'
-      end
-    end
-  end
-end
+# namespace :webpacker do
+#   task :install do
+#     on roles(:web) do
+#       with rails_env: fetch(:rails_env) do
+#         rake 'react_on_rails:locale'
+#         execute :yarn, :run, 'build:production'
+#       end
+#     end
+#   end
+# end
 
-after 'npm:install', 'webpacker:install'
+# after 'npm:install', 'webpacker:install'
+
+# before "deploy:assets:precompile", "deploy:yarn_install"
+
+# namespace :deploy do
+#   desc 'Run rake yarn:install'
+#   task :yarn_install do
+#     on roles(:web) do
+#       within release_path do
+#         execute("cd #{release_path} && yarn install")
+#       end
+#     end
+#   end
+# end
 
 # server-based syntax
 # ======================

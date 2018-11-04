@@ -48,3 +48,16 @@ set :npm_flags, '--production'
 set :nvm_type, :user # or :system, depends on your nvm setup
 set :nvm_node, 'v10.13.0'
 set :nvm_map_bins, %w{node npm yarn}
+
+# before "deploy:assets:precompile", "deploy:yarn_install"
+
+# namespace :deploy do
+#   desc 'Run rake yarn:install'
+#   task :yarn_install do
+#     on roles(:web) do
+#       within release_path do
+#         execute("cd #{release_path} && yarn install")
+#       end
+#     end
+#   end
+# end
