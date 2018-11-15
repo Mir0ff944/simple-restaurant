@@ -25,6 +25,8 @@ gem 'jquery-rails'
 
 gem 'bundler', '~> 1.15', '>= 1.15.4'
 
+gem 'rubocop'
+
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.2'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -47,7 +49,7 @@ gem 'capistrano-linked-files'
 gem 'capistrano-npm'
 
 # Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.1.0', require: false
+gem 'bootsnap', require: false
 
 #react-on-reals required gems
 gem "react_on_rails", "11.0.0"
@@ -78,14 +80,16 @@ group :test do
 end
 
 #Capistrano
-group :development do
-  gem 'capistrano', '~> 3.11'
-  gem 'capistrano-rails'
-  gem 'capistrano-rbenv'
-end
+# group :development do
+#   gem 'capistrano', '~> 3.11'
+#   gem 'capistrano-rails'
+#   gem 'capistrano-rbenv'
+# end
 
 group :deploy do
   gem 'capistrano', '~> 3.11'
+  gem 'capistrano-rails'
+  gem 'capistrano-rbenv'
   gem 'capistrano-nvm'
   gem 'capistrano-npm'
   gem 'capistrano-yarn'
