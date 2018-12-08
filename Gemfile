@@ -53,7 +53,7 @@ gem 'bootsnap', require: false
 
 #react-on-reals required gems
 gem "react_on_rails", "11.0.0"
-gem "webpacker", "~> 3"
+gem "webpacker"
 
 
 group :development, :test do
