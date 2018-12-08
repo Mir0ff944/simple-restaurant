@@ -5,6 +5,5 @@ const environment = require('./environment')
 module.exports = environment.toWebpackConfig()
 
 module.exports = {
-  mode: 'production',
-  entry: '../../app/views/layouts/application.html.erb'
+  mode: "production"
 };
