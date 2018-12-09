@@ -2,11 +2,6 @@ process.env.NODE_ENV = process.env.NODE_ENV || 'development'
 
 const environment = require('./environment')
 
-module.exports = environment.toWebpackConfig()
+environment.config.set('mode', 'development')
 
-module.exports = {
-  mode: 'development',
-  entry: {
-    app: "./app/assets/javascripts/application.js"
-  }
-};
+module.exports = environment.toWebpackConfig()
