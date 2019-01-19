@@ -277,7 +277,7 @@ PLATFORMS
 DEPENDENCIES
   bootsnap
   bootstrap-sass (~> 3.3.7)
-  bundler (~> 1.15, >= 1.15.4)
+  bundler
   byebug
   capistrano (~> 3.11)
   capistrano-linked-files
