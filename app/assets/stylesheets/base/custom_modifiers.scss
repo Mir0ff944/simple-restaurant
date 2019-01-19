@@ -35,14 +35,15 @@ h1,h2,h3,h4,h5,h6 {
 p {
   font-size: 16px;
   line-height: 1.5;
-  margin: 0 0 25px
+  margin: 0 0 25px;
+  font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
 }
 
 @media (min-width: 768px) {
   p {
     font-size:18px;
     line-height: 1.6;
-    margin: 0 0 35px
+    margin: 0 0 35px;
   }
 }
 
@@ -263,7 +264,7 @@ img.image-preview {
   border-radius: 10px;
   bottom: 20px;
   display: none;
-  left: 30px;
+  right: 30px;
   position: fixed;
   z-index: 99;
 }
@@ -281,4 +282,41 @@ img.image-preview {
   margin-left: 10px;
   margin-right: 10px;
   text-align: left;
+}
+
+.fb-post {
+  padding-bottom: 0.5em;
+}
+
+@media only screen and (max-width: 424px) {
+  .fb-post {
+    margin-left: -1em;
+  }
+
+  .fb-post > span {
+    display: inline-block;
+    transform:scale(0.8,0.9);
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .fb-post {
+    margin-left: -2em;
+  }
+
+  .fb-post > span {
+    display: inline-block;
+    transform:scale(0.7,0.8);
+  }
+}
+
+@media screen and (max-width: 321px) {
+  .fb-post {
+    margin-left: -2.5em;
+  }
+
+  .fb-post > span {
+    display: inline-block;
+    transform:scale(0.7,0.8);
+  }
 }

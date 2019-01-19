@@ -1,11 +1,5 @@
 <% @title="Бистро Аги" %>
 
-<section id="menu" class="content-section text-center" >
-  <div class="container">
-    <%= render 'menu' %>
-  </div>
-</section>
-
 <div>
   <%= react_component("ReactSections") %>
 </div>
@@ -15,11 +9,6 @@
     <%= render 'map' %>
   </div>
 </section>
-
-<%# <hr class='line-separator' />
-  <section id="about" class="content-section text-center">
-  <%= render 'about' %>
-<%# </section> %>
 
 <button class="btn back-to-top-btn" id="back-to-top-btn" onClick="topFunction()" title="<%= t('nav.back_to_top') %>"></button>
 
