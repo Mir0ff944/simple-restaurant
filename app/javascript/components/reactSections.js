@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageGallery from './imageGallery';
 import AboutUs from './aboutUs';
+import DailyMenu from './dailyMenu'
 
 export default class ReactSections extends React.Component {
   render() {
@@ -18,6 +19,13 @@ export default class ReactSections extends React.Component {
             <h1 className='section-title'>Галерия</h1>
             <hr className='line-separator' />
             < ImageGallery />
+          </div>
+        </section>
+        <section id="new-section" className="content-section text-center">
+          <div className="container menu-white-bg">
+            <h1 className='section-title'>Галерия</h1>
+            <hr className='line-separator' />
+            < DailyMenu />
           </div>
         </section>
       </div>
