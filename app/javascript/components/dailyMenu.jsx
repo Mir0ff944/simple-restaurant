@@ -22,9 +22,8 @@ export default class DailyMenu extends React.Component {
       FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
           this.accessToken = response.authResponse.accessToken;
-          console.log('Response 1:' + this.accessToken)
           FB.api(
-            "/me/feed",
+            "/me/feed?limit=10",
             "GET",
             function (response) {
               var post = filterMenu(response["data"])[0];
@@ -67,5 +66,5 @@ function filterMenu(props) {
 }
 
 function generateURL(postName, postID) {
-  return `https://www.facebook.com/notes/ayeayecaptain94/${postName}/${postID}/`
+  return `https://www.facebook.com/notes/agi-agi/${postName}/${postID}/`
 }
