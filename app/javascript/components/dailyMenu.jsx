@@ -4,9 +4,10 @@ export default class DailyMenu extends React.Component {
 
   constructor() {
     super();
-    this.facebook_post_id = null;
+    this.postId = null;
     this.accessToken = null;
     this.postInfo = null;
+    this.postName = null;
   }
 
   componentDidMount() {
@@ -21,11 +22,15 @@ export default class DailyMenu extends React.Component {
       FB.getLoginStatus(function (response) {
         if (response.status === 'connected') {
           this.accessToken = response.authResponse.accessToken;
-          console.log(this.accessToken)
+          console.log('Response 1:' + this.accessToken)
           FB.api(
             "/me/feed",
             "GET",
-            function (response) { console.log(JSON.stringify(response)); }
+            function (response) {
+              var post = filterMenu(response["data"])[0];
+              this.postId = post["id"];
+              this.postName = encodeURIComponent(post["message"]);
+            }
           );
         } else {
           console.log('not_authorized');
@@ -44,7 +49,23 @@ export default class DailyMenu extends React.Component {
 
   render() {
     return (
-      <h3>{this.postInfo}</h3>
+      <div className="fb-post"
+        data-href={generateURL(this.postName, this.postId)}
+        data-show-text="true">
+      </div>
     )
   }
+}
+
+function filterMenu(props) {
+  const facebookPost = props.map((p) => {
+    if (p.hasOwnProperty("message") && p["message"].includes("Menu") && p["story"].includes("published a note")) {
+      return p
+    }
+  });
+  return facebookPost
+}
+
+function generateURL(postName, postID) {
+  return `https://www.facebook.com/notes/ayeayecaptain94/${postName}/${postID}/`
 }
