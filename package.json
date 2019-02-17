@@ -2,7 +2,7 @@
   "name": "restaurant2_0",
   "private": true,
   "engines": {
-    "node": "10.13.0",
+    "node": "11.6.0",
     "npm": "6.4.1",
     "yarn": "1.13.0"
   },
