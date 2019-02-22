@@ -4,10 +4,13 @@ export default class DailyMenu extends React.Component {
 
   constructor() {
     super();
-    this.postId = null;
+    this.state = {
+      postId: null,
+      postName: null,
+      postIsNote: null
+    }
     this.accessToken = null;
     this.postInfo = null;
-    this.postName = null;
   }
 
   componentDidMount() {
@@ -23,12 +26,16 @@ export default class DailyMenu extends React.Component {
         if (response.status === 'connected') {
           this.accessToken = response.authResponse.accessToken;
           FB.api(
-            "/me/feed?limit=10",
+            "/bistroagi5/feed?limit=5",
             "GET",
             function (response) {
               var post = filterMenu(response["data"])[0];
-              this.postId = post["id"];
-              this.postName = encodeURIComponent(post["message"]);
+              if (post != null) {
+                this.setState({postId: post["id"]});
+                this.setState({postName: encodeURIComponent(post["message"])});
+              } else {
+                console.log('No suitable posts found')
+              }
             }
           );
         } else {
@@ -46,10 +53,16 @@ export default class DailyMenu extends React.Component {
     }(document, 'script', 'facebook-jssdk'));
   }
 
+  generateURL() {
+    // If post is a note should use different url for rendering notes
+    console.log('generateURL' + this.state.postName + this.state.postId);
+    return `https://www.facebook.com/notes/agi-agi/posts/${this.state.postId}/`
+  }
+
   render() {
     return (
       <div className="fb-post"
-        data-href={generateURL(this.postName, this.postId)}
+        data-href={this.generateURL}
         data-show-text="true">
       </div>
     )
@@ -58,13 +71,14 @@ export default class DailyMenu extends React.Component {
 
 function filterMenu(props) {
   const facebookPost = props.map((p) => {
-    if (p.hasOwnProperty("message") && p["message"].includes("Menu") && p["story"].includes("published a note")) {
+    if (p.hasOwnProperty("message") && p["message"].includes("МЕМЮ")) {
       return p
     }
   });
   return facebookPost
 }
 
-function generateURL(postName, postID) {
-  return `https://www.facebook.com/notes/agi-agi/${postName}/${postID}/`
-}
+// function generateURL(postName, postID) {
+//   console.log('generateURL' + postName + postID);
+//   return `https://www.facebook.com/notes/agi-agi/${postName}/${postID}/`
+// }
