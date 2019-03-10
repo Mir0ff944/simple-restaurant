@@ -23,7 +23,7 @@ export default class ReactSections extends React.Component {
         </section>
         <section id="new-section" className="content-section text-center">
           <div className="container menu-white-bg">
-            <h1 className='section-title'>Галерия</h1>
+            <h1 className='section-title'>Daily Menu</h1>
             <hr className='line-separator' />
             < DailyMenu />
           </div>

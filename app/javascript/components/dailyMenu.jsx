@@ -5,16 +5,14 @@ export default class DailyMenu extends React.Component {
   constructor() {
     super();
     this.state = {
-      postId: null,
-      postName: null,
-      postIsNote: null
+      postId: null
     }
     this.accessToken = null;
     this.postInfo = null;
   }
 
   componentDidMount() {
-    window.fbAsyncInit = function () {
+    window.fbAsyncInit = () => {
       FB.init({
         appId: '',
         autoLogAppEvents: true,
@@ -22,19 +20,18 @@ export default class DailyMenu extends React.Component {
         version: 'v3.2'
       });
 
-      FB.getLoginStatus(function (response) {
+      FB.getLoginStatus((response) => {
         if (response.status === 'connected') {
           this.accessToken = response.authResponse.accessToken;
           FB.api(
             "/bistroagi5/feed?limit=5",
-            "GET",
-            function (response) {
+            "GET", (response) => {
               var post = filterMenu(response["data"])[0];
+              console.log('1 ' + JSON.stringify(post['id']));
               if (post != null) {
                 this.setState({postId: post["id"]});
-                this.setState({postName: encodeURIComponent(post["message"])});
               } else {
-                console.log('No suitable posts found')
+                console.log('No suitable posts found');
               }
             }
           );
@@ -53,25 +50,27 @@ export default class DailyMenu extends React.Component {
     }(document, 'script', 'facebook-jssdk'));
   }
 
-  generateURL() {
-    // If post is a note should use different url for rendering notes
-    console.log('generateURL' + this.state.postName + this.state.postId);
-    return `https://www.facebook.com/notes/agi-agi/posts/${this.state.postId}/`
-  }
+  // generateURL() {
+  //   return `https://www.facebook.com/agi-agi/posts/${this.state.postId}`
+  // }
 
   render() {
-    return (
-      <div className="fb-post"
-        data-href={this.generateURL}
-        data-show-text="true">
-      </div>
-    )
+    if (this.state && this.state.postId ) {
+      return (
+        `poop ${this.state.postId}`
+      )
+    } else {
+      return (
+        'Poop'
+      )
+    }
   }
 }
 
 function filterMenu(props) {
   const facebookPost = props.map((p) => {
-    if (p.hasOwnProperty("message") && p["message"].includes("МЕМЮ")) {
+    console.log('filterMenu' + JSON.stringify(p));
+    if (p.hasOwnProperty("message")) {
       return p
     }
   });
