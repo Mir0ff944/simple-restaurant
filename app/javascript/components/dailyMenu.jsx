@@ -29,7 +29,9 @@ export default class DailyMenu extends React.Component {
               var post = filterMenu(response["data"])[0];
               console.log('1 ' + JSON.stringify(post['id']));
               if (post != null) {
-                this.setState({postId: post["id"]});
+                var post_id = post["id"].match(/[^_]*$/)
+                console.log('post_id ' + post_id);
+                this.setState({postId: post_id});
               } else {
                 console.log('No suitable posts found');
               }
@@ -50,18 +52,18 @@ export default class DailyMenu extends React.Component {
     }(document, 'script', 'facebook-jssdk'));
   }
 
-  // generateURL() {
-  //   return `https://www.facebook.com/agi-agi/posts/${this.state.postId}`
-  // }
-
   render() {
-    if (this.state && this.state.postId ) {
+    if (this.state.postId ) {
+      var post_url = `https://www.facebook.com/bistroagi5/posts/${this.state.postId}/`
       return (
-        `poop ${this.state.postId}`
+        <div className="fb-post"
+          data-href={post_url}
+          data-show-text="true">
+        </div>
       )
     } else {
       return (
-        'Poop'
+        <h2>Please wait</h2>
       )
     }
   }
@@ -69,15 +71,9 @@ export default class DailyMenu extends React.Component {
 
 function filterMenu(props) {
   const facebookPost = props.map((p) => {
-    console.log('filterMenu' + JSON.stringify(p));
     if (p.hasOwnProperty("message")) {
       return p
     }
   });
   return facebookPost
 }
-
-// function generateURL(postName, postID) {
-//   console.log('generateURL' + postName + postID);
-//   return `https://www.facebook.com/notes/agi-agi/${postName}/${postID}/`
-// }
