@@ -23,7 +23,7 @@ gem 'shoulda-context', '~> 1.2', '>= 1.2.1'
 
 gem 'jquery-rails'
 
-gem 'bundler', '~> 1.15', '>= 1.15.4'
+gem 'bundler'
 
 gem 'rubocop'
 
