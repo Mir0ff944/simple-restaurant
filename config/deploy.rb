@@ -46,7 +46,7 @@ set :npm_flags, '--production'
 
 
 set :nvm_type, :user # or :system, depends on your nvm setup
-set :nvm_node, 'v11.6.0'
+set :nvm_node, 'v10.13.0'
 set :nvm_map_bins, %w{node npm yarn}
 
 # before "deploy:assets:precompile", "deploy:yarn_install"
