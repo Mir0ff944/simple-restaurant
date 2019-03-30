@@ -8,20 +8,23 @@ export default class ReactSections extends React.Component {
     return (
       <div className="container">
         <section id="new-section" className="content-section text-center">
-          <div className="container menu-white-bg">
+          <div className="container sections-content">
             <h1 className='section-title'>Меню</h1>
             <hr className='line-separator' />
-            < DailyMenu />
-            <p>
-              Всеки делничен ден заведението предлага топли напитки и домашно приготвени закуски, храната е приготвена с много желание и любов изцяло от нас.
-              Предлагаме разнообразни яснтия на ниски цени от бългърската и гръдската традиционна кухня.
-              <br/><strong>Поръчки за обяд моля да бъдат нарпавени преди 11:00 ч.</strong>
-            </p>
+            <div className="row justify-content-md-center">
+              < DailyMenu />
+              <p className='menu-info'>
+                Всеки делничен ден заведението предлага топли напитки и домашно приготвени закуски,
+                <br/> храната е приготвена с много желание и любов изцяло от нас.
+                <br/>Предлагаме разнообразни яснтия на ниски цени от бългърската и гръдската традиционна кухня.
+                <br /><strong>Поръчки за обяд моля да бъдат нарпавени преди 11:00 ч. на телефон +359 89 841 8162</strong>
+              </p>
+            </div>
           </div>
         </section>
 
         <section id="about" className="content-section text-center">
-          <div className='container menu-white-bg'>
+          <div className='container sections-content'>
             <h1 className='section-title'>Информация и работно време</h1>
             <hr className='line-separator' />
             < AboutUs />
@@ -29,7 +32,7 @@ export default class ReactSections extends React.Component {
         </section>
 
         <section id="new-section" className="content-section text-center">
-          <div className="container menu-white-bg">
+          <div className="container sections-content">
             <h1 className='section-title'>Галерия</h1>
             <hr className='line-separator' />
             < ImageGallery />
