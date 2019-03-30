@@ -12,8 +12,9 @@ export default class AboutUs extends React.Component {
     this.setState({
       contacts: [
         { id: 1, title: 'Адрес', value: 'ул. „Житница“ 44, 1612 Нпз Стедец, София' },
-        { id: 2, title: 'Facebook', value: <u><a href='https://www.facebook.com/bistroagi5'>Натиснете тук!</a></u> },
-        { id: 3, title: 'Телефон', value: '+359 89 841 8162' }
+        { id: 2, title: 'Facebook', value: <a href='https://www.facebook.com/bistroagi5'>Натиснете тук!</a> },
+        { id: 3, title: 'Google Maps', value: <a href='https://www.google.com/maps/place/Bistro+%26+Office+Persima+Ltd/@42.6854285,23.2786317,16.77z/data=!4m8!1m2!2m1!1sRestaurants!3m4!1s0x0:0x6cf443ee8e2b1252!8m2!3d42.6852047!4d23.2801178?hl=en-US'>Натиснете тук!</a> },
+        { id: 4, title: 'Телефон', value: '+359 89 841 8162' }
       ],
       open_hours: [
         { id: 4, title: 'Понеделник', value: '07:00 до 17:00' },
