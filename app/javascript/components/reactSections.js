@@ -7,7 +7,7 @@ export default class ReactSections extends React.Component {
   render() {
     return (
       <div className="container">
-        <section id="new-section" className="content-section text-center">
+        <section id="menu" className="content-section text-center">
           <div className="container sections-content">
             <h1 className='section-title'>Меню</h1>
             <hr className='line-separator' />
@@ -31,7 +31,7 @@ export default class ReactSections extends React.Component {
           </div>
         </section>
 
-        <section id="new-section" className="content-section text-center">
+        <section id="gallery" className="content-section text-center">
           <div className="container sections-content">
             <h1 className='section-title'>Галерия</h1>
             <hr className='line-separator' />
