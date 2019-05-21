@@ -4,6 +4,19 @@ import AboutUs from './aboutUs';
 import DailyMenu from './dailyMenu'
 
 export default class ReactSections extends React.Component {
+
+  componentDidMount() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+        });
+      });
+    });
+  }
+
   render() {
     return (
       <div className="container">
