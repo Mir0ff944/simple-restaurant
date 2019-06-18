@@ -116,69 +116,7 @@ a {
   border: 1px solid black
 }
 
-.masthead {
-  display: block;
-  width: 100%;
-  height: fit-content;
-  padding: 161px 0;
-  text-align: center;
-  color: #fff;
-  background: url(asset-path('large_banner_bistro.jpg')) no-repeat center;
-  background-color:rgb(255, 255, 255);
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  border-bottom-left-radius: 6px;
-  border-bottom-right-radius: 6px;
-}
-
-.masthead .intro-body {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.masthead .intro-body .brand-heading {
-  font-size: 50px;
-}
-
-.masthead .intro-body .intro-text {
-  font-size: 18px;
-}
-
-@media only screen and (max-width: 990px) {
-  .masthead {
-    width: 100%;
-    height: auto;
-    background: url(asset-path('md_banner_bistro.jpg')) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    border-bottom-left-radius: 6px;
-    border-bottom-right-radius: 6px;
-  }
-
-  .masthead .intro-body .brand-heading {
-    font-size: 100px;
-  }
-
-  .masthead .intro-body .intro-text {
-    font-size: 22px;
-  }
-}
-
 @media only screen and (max-width: 763px) {
-  .masthead {
-    width: 100%;
-    height: auto;
-    background: url(asset-path('sm_banner_bistro.jpg')) no-repeat center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-  }
-
   div.row {
     font-size: .8rem;
   }
