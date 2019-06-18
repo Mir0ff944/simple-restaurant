@@ -126,6 +126,11 @@ a {
   color: black;
   padding-top: 30px;
   padding-bottom: 30px;
+
+  &--footer {
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
 }
 
 .section-faded-backgroud {
@@ -159,8 +164,12 @@ a {
 .line-separator {
   width: 90%;
 
-  &.--info {
+  &--info {
     margin: 0px;
+  }
+
+  &--footer {
+    border-bottom: 1px solid #000000;
   }
 }
 
@@ -261,5 +270,19 @@ img.image-preview {
   .fb-post > span {
     display: inline-block;
     transform:scale(0.7,0.8);
+  }
+}
+
+.footer {
+  &--row{
+    padding: 15px 0px 15px;
+  }
+
+  &--container {
+    background-color: #ffffffd7;
+  }
+
+  &--logo {
+    font-family: Arial, Helvetica, sans-serif
   }
 }
