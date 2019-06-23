@@ -12,6 +12,7 @@
 //
 //= require jquery/jquery-3.4.1.min
 //= require rails-ujs
+//= require lazysizes/lazysizes
 //= require activestorage
 //= require turbolinks
 //= require_tree .
