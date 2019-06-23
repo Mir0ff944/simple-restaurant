@@ -26,7 +26,7 @@
 </nav>
 <header class="container-fluid">
   <div class="benner-wrapper">
-    <%= image_tag asset_url('scroll_banner.png') %>
+    <img class='lazyload', data-src="<%= asset_url('scroll_banner.png') %>" />
   </div>
 </header>
 <%= yield %>
