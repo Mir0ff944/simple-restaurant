@@ -1,7 +1,7 @@
 import React from 'react';
-import ImageGallery from './imageGallery';
-import AboutUs from './aboutUs';
-import DailyMenu from './dailyMenu'
+const ImageGallery = lazy(() => import('./imageGallery'));
+const AboutUs = lazy(() => import('./aboutUs'));
+const DailyMenu = lazy (() => import('/.dailyMenu'));
 
 export default class ReactSections extends React.Component {
 

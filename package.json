@@ -18,7 +18,7 @@
     "npm": "^6.9.0",
     "postcss-preset-env": "^6.4.0",
     "prop-types": "^15.6.2",
-    "react": "^16.6.3",
+    "react": "^16.8.6",
     "react-dom": "^16.6.3",
     "react-images": "^0.5.19",
     "react-on-rails": "^11.2.1",
