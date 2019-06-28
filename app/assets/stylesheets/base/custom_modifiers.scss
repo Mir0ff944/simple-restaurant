@@ -279,10 +279,14 @@ img.image-preview {
   }
 
   &--container {
-    background-color: #ffffffd7;
+    min-width: 100%;
+    background-color: #ffffffea;
   }
 
   &--logo {
-    font-family: Arial, Helvetica, sans-serif
+    margin-bottom: 0px;
+    font-size: 23px;
+    font-family: Garamond, Baskerville, "Baskerville Old Face", "Hoefler Text", "Times New Roman", serif;
+    font-style: italic;
   }
 }
